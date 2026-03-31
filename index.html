@@ -37,7 +37,13 @@
       transition: padding .3s;
     }
     nav.scrolled { padding: 10px 48px; }
-    .nav-logo { font-size: 1.05rem; font-weight: bold; letter-spacing: .5px; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: bold; letter-spacing: .5px; }
+    .nav-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      border: 2px solid var(--rose);
+      flex-shrink: 0;
+    }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--graphite); opacity: .65; font-size: .95rem; transition: opacity .2s; }
     .nav-links a:hover { opacity: 1; }
@@ -349,7 +355,10 @@
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav id="nav">
-  <div class="nav-logo">Людмила Кранина</div>
+  <div class="nav-logo">
+    <img src="photo_2026-03-31_16-35-45.jpg" alt="Людмила Кранина" class="nav-avatar">
+    Людмила Кранина
+  </div>
   <ul class="nav-links">
     <li><a href="#problem">О проблеме</a></li>
     <li><a href="#quiz-section">Тест</a></li>
